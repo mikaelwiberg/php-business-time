@@ -98,7 +98,8 @@ class Interval extends CarbonInterval
      */
     public static function instance(
         DateInterval $dateInterval,
-        $trimMicroseconds = true
+        $trimMicroseconds = true,
+        bool $skipCopy = false
     ): self {
         return self::seconds(
             self::intervalToSeconds($dateInterval, $trimMicroseconds)
